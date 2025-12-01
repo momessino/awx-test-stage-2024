@@ -1,184 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airwallex Widget - Test Page</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .container {
-            background: white;
-            border-radius: 20px;
-            padding: 60px 40px;
-            max-width: 600px;
-            width: 100%;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            text-align: center;
-        }
-        
-        h1 {
-            color: #2d3748;
-            font-size: 32px;
-            margin-bottom: 16px;
-        }
-        
-        .subtitle {
-            color: #718096;
-            font-size: 18px;
-            margin-bottom: 40px;
-        }
-        
-        .badge {
-            display: inline-block;
-            background: #48bb78;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
-        
-        .instructions {
-            background: #f7fafc;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 30px 0;
-            text-align: left;
-        }
-        
-        .instructions h2 {
-            color: #2d3748;
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .instructions ol {
-            color: #4a5568;
-            line-height: 1.8;
-            padding-left: 20px;
-        }
-        
-        .instructions li {
-            margin-bottom: 12px;
-        }
-        
-        .instructions code {
-            background: #edf2f7;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-            color: #e53e3e;
-        }
-        
-        .info-box {
-            background: #bee3f8;
-            border-left: 4px solid #3182ce;
-            padding: 16px;
-            border-radius: 8px;
-            margin-top: 20px;
-            text-align: left;
-        }
-        
-        .info-box p {
-            color: #2c5282;
-            font-size: 14px;
-            line-height: 1.6;
-            margin: 0;
-        }
-        
-        .footer {
-            margin-top: 40px;
-            color: #a0aec0;
-            font-size: 14px;
-        }
-        
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 20px;
-            padding: 12px 24px;
-            background: #c6f6d5;
-            border-radius: 8px;
-            color: #22543d;
-            font-weight: 600;
-        }
-        
-        .status::before {
-            content: "●";
-            color: #38a169;
-            font-size: 20px;
-        }
-    </style>
+    <title>Airwallex Widget Test</title>
+    <link rel="stylesheet" href="https://airwallex-card-widget-backend-production.up.railway.app/widget.css">
 </head>
 <body>
-    <div class="container">
-        <div class="badge">TEST ENVIRONMENT</div>
-        
-        <h1>🎯 Airwallex Widget Test</h1>
-        <p class="subtitle">Тестовая страница для проверки виджета карт</p>
-        
-        <div class="status">Widget Active & Ready</div>
-        
-        <div class="instructions">
-            <h2>📋 Как протестировать:</h2>
-            <ol>
-                <li>Найдите <strong>синюю кнопку</strong> в правом нижнем углу экрана</li>
-                <li>Нажмите на неё чтобы открыть виджет</li>
-                <li>Введите email: <code>test@example.com</code></li>
-                <li>Получите OTP код из базы данных</li>
-                <li>Введите код для входа в виджет</li>
-                <li>Просмотрите информацию о картах</li>
-            </ol>
-        </div>
-        
-        <div class="info-box">
-            <p><strong>💡 Подсказка:</strong> Если кнопка виджета не появилась, откройте DevTools (F12) и проверьте Console на наличие ошибок.</p>
-        </div>
-        
-        <div class="footer">
-            Stage Test Page v1.0 | Airwallex Card Widget
-        </div>
-    </div>
+    <h1>🎯 Airwallex Widget Test</h1>
+    <p>Ищите синюю кнопку в правом нижнем углу!</p>
     
-    <!-- Airwallex Card Widget Integration -->
     <script>
         window.AirwallexWidget = {
             apiUrl: 'https://airwallex-card-widget-backend-production.up.railway.app'
         };
     </script>
     <script src="https://airwallex-card-widget-backend-production.up.railway.app/widget.js"></script>
-    <link rel="stylesheet" href="https://airwallex-card-widget-backend-production.up.railway.app/widget.css">
-    
-    <!-- Initialize Widget -->
-    <script>
-        window.addEventListener('load', function() {
-            if (window.AirwallexCardWidget) {
-                window.AirwallexCardWidget.init({
-                    apiUrl: 'https://airwallex-card-widget-backend-production.up.railway.app'
-                });
-                console.log('✅ Airwallex Widget initialized');
-            } else {
-                console.error('❌ AirwallexCardWidget not found');
-            }
-        });
-    </script>
 </body>
 </html>
